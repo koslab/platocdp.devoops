@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<object name="portal_skins" allow_any="False" cookie_persistence="False"
+   default_skin="Sunburst Theme">
+   <object name="platocdp_devoops"
+        meta_type="Filesystem Directory View"
+        directory="platocdp.devoops:skins/platocdp_devoops"/>
+    <skin-path name="*">
+        <layer name="platocdp_devoops"
+                insert-after="custom"/>
+    </skin-path>
+</object>
