@@ -20,6 +20,8 @@
 
     <cmf:registerDirectory name="platocdp_devoops"/>
 
+    <!--    <adapter factory=".transform.TidyTransform" name="platocdp.tidytransform" />-->
+
     <browser:resourceDirectory
         name="platocdp.devoops"
         directory="static"/>

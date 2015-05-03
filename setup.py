@@ -33,7 +33,10 @@ setup(name='platocdp.devoops',
           'collective.dexteritytextindexer',
           'plone.app.multilingual',
           'plone.multilingualbehavior',
-          'z3c.jbot'
+          'z3c.jbot',
+          'plonetheme.bootstrap',
+          'collective.js.bootstrap',
+          'pytidylib',
           # -*- Extra requirements: -*-
       ],
       extras_require={

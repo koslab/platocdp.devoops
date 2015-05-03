@@ -11,7 +11,7 @@
         <theme href="index.html"/>
         <!--HEAD SECTION-->
         <!-- Drop styles in the head - these are added back by including them from Plone -->
-        <drop theme="/html/head/style | /html/head/script | /html/head/link | /html/head/title" />
+        <!-- <drop theme="/html/head/style | /html/head/script | /html/head/link | /html/head/title" />-->
         <prepend theme="/html/head" content="/html/head/base | /html/head/link | /html/head/style | /html/head/script | /html/head/meta | /html/head/title" />
         <replace theme="/html" content="/html" attributes="lang"/>
         <merge theme="/html/body" content="/html/body" attributes="class"/>
@@ -26,8 +26,30 @@
         <replace css:theme="#portal-logo"
             css:content="#portal-logo"/>
 
-        <replace css:theme-children="#portal-globalnav"
-            css:content-children="#portal-globalnav"/>
+        <replace css:theme-children=".main-menu">
+            <xsl:for-each css:select="#navigation > li">
+                <li>
+                    <a><xsl:attribute name="class">
+                            <xsl:value-of select="a/@class"/>
+                            <xsl:if test="contains(current()/@class, 'active')">
+                                active
+                            </xsl:if>
+                    </xsl:attribute><xsl:attribute name="href">
+                    <xsl:value-of select="a/@href"/>
+                    </xsl:attribute>
+                <i class="fa fa-folder"></i>
+                <xsl:copy-of select="a/text()"/>
+                </a>
+                </li>
+            </xsl:for-each>
+        </replace>
+
+        <replace css:theme-children=".breadcrumb" css:content-children=".breadcrumb"/>
+
+        <replace css:theme-children="#primary-title" css:content-children="#parent-fieldname-title"/>
+
+        <replace css:theme-children="#primary-content" css:content-children="#content-core"/>
+
 
         <replace css:theme-children="#portal-columns"
             css:content-children="#portal-columns"/>
