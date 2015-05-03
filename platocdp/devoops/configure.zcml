@@ -20,7 +20,7 @@
 
     <cmf:registerDirectory name="platocdp_devoops"/>
 
-    <!--    <adapter factory=".transform.TidyTransform" name="platocdp.tidytransform" />-->
+    <adapter factory=".transform.DisableThemeForAjax" name="platocdp.disablethemeforajax" />
 
     <browser:resourceDirectory
         name="platocdp.devoops"
