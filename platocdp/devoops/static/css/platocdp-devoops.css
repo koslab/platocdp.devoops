@@ -1,0 +1,23 @@
+#content ul.breadcrumb {
+    list-style: outside none none;
+}
+
+#content ul.breadcrumb > li {
+    display:inline-block;
+}
+
+#content ul.breadcrumb > .active {
+    color:#fff;
+}
+
+#actions-nav li {
+    display:block
+}
+
+#content .box-name {
+    cursor:default;
+}
+
+#content ul.nav {
+    list-style:none;
+}
