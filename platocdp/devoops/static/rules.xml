@@ -46,19 +46,35 @@
 
         <replace css:theme-children=".breadcrumb" css:content-children=".breadcrumb"/>
 
-        <replace css:theme-children="#primary-title" css:content-children="#parent-fieldname-title"/>
+        <prepend css:theme="#content-well" css:content-children="#content"/>
 
-        <replace css:theme-children="#primary-content" css:content-children="#content-core"/>
+        <drop css:theme="#platocdp-contentmenu-edit" css:if-not-content="#edit-content-views"/>
+        <replace css:theme-children="#platocdp-contentmenu-edit > .dropdown-menu"
+            css:content-children="#edit-content-views"/>
 
 
-        <replace css:theme-children="#portal-columns"
-            css:content-children="#portal-columns"/>
+        <drop css:theme="#platocdp-contentmenu-actions" css:if-not-content="#plone-contentmenu-actions"/>
+        <replace css:theme-children="#platocdp-contentmenu-actions > .dropdown-menu"
+            css:content-children="#plone-contentmenu-actions > ul"/>
 
-        <replace css:theme-children="#portal-colophon"
-            css:content-children="#portal-colophon"/>
+        <drop css:theme="#platocdp-contentmenu-display" css:if-not-content="#plone-contentmenu-display"/>
+        <replace css:theme-children="#platocdp-contentmenu-display > .dropdown-menu"
+            css:content-children="#plone-contentmenu-display > ul"/>
 
-        <replace css:theme-children="#portal-siteactions"
-            css:content-children="#portal-siteactionst"/>
+        <drop css:theme="#platocdp-contentmenu-factories" css:if-not-content="#plone-contentmenu-factories"/>
+        <replace css:theme-children="#platocdp-contentmenu-factories > .dropdown-menu">
+            <xsl:for-each css:select="#plone-contentmenu-factories > ul > li">
+                <li><a><xsl:attribute name="id"><xsl:value-of select="a/@id"/></xsl:attribute><xsl:attribute name="title"><xsl:value-of select="a/@title"/></xsl:attribute><xsl:attribute name="href"><xsl:value-of select="a/@href"/></xsl:attribute>
+                <xsl:copy-of select="a/node()"/>
+                </a></li>
+            </xsl:for-each>
+        </replace>
+
+        <drop css:theme="#platocdp-contentmenu-workflow" css:if-not-content="#plone-contentmenu-workflow"/>
+        <replace css:theme-children="#platocdp-contentmenu-workflow > .dropdown-menu"
+            css:content-children="#plone-contentmenu-workflow > ul"/>
+        <replace css:theme-children="#platocdp-contentmenu-workflow .badge" 
+            css:content-children="#plone-contentmenu-workflow > button > span:nth-child(2)"/>
 
     </rules>
 </rules>
