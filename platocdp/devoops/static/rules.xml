@@ -126,8 +126,27 @@
             </replace>
         </rules>
 
+        <replace css:theme-children="#content-well" css:if-content="#DV-container"> 
+            <xsl:copy-of select="//*[@id='content-core']/div/p"/>
+            <xsl:copy-of select="//*[@id='DV-container']"/>
+            <div id="overlay"></div>
+        </replace>
+        <append css:theme="#content-well" css:if-content="#DV-container" content="//*[@id='content-core']/div/script"/>
+        <drop css:theme="#content-well" attributes="class" css:if-content="#DV-container"/>
+
+        <!--
+        <drop css:content="#manage-annotations"/>
+        <drop css:content="#manage-sections"/>
+        <drop css:content="#annotation-management"/>
+        <drop css:content="#section-management"/>
+        -->
         <rules css:if-not-content=".portaltype-portlet-page.template-two-columns">
+            <rules css:if-not-content="#DV-container">
             <prepend css:theme="#content-well" css:content-children="#content-core"/>
+
+            <prepend css:theme="#content-well" css:content="#content form[name='edit_form']"
+                css:if-content=".template-atct_edit"/>
+            </rules>
         </rules>
 
         <!-- [/MainContent] -->

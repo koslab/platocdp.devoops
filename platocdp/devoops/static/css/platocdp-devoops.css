@@ -37,3 +37,7 @@
 .portletCalendar .box-name {
     text-align:center;
 }
+
+.DV-views div span {
+    height:31px;
+}
