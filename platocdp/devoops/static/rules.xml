@@ -18,13 +18,10 @@
         <merge theme="/html/body" content="/html/body" attributes="dir"/>
         <append css:theme="body" css:content="#plone-analytics"/>
 
-        <replace css:theme-children="#portal-personaltools-wrapper"
-            css:content-children="#portal-personaltools-wrapper"/>
-        <replace css:theme-children="#portal-searchbox"
-            css:content-children="#portal-searchbox"/>
-
         <replace css:theme="#portal-logo"
             css:content="#portal-logo"/>
+
+        <!-- [LeftNavigationMenu] -->
 
         <replace css:theme-children=".main-menu">
             <xsl:for-each css:select="#navigation > li">
@@ -44,9 +41,10 @@
             </xsl:for-each>
         </replace>
 
-        <replace css:theme-children=".breadcrumb" css:content-children=".breadcrumb"/>
+        <!-- [/LeftNavigationMenu] -->
 
-        <prepend css:theme="#content-well" css:content-children="#content"/>
+
+        <!-- [ActionButtons] -->
 
         <drop css:theme="#platocdp-contentmenu-edit" css:if-not-content="#edit-content-views"/>
         <replace css:theme-children="#platocdp-contentmenu-edit > .dropdown-menu"
@@ -76,5 +74,14 @@
         <replace css:theme-children="#platocdp-contentmenu-workflow .badge" 
             css:content-children="#plone-contentmenu-workflow > button > span:nth-child(2)"/>
 
+        <!-- [/ActionButtons] -->
+
+
+        <!-- [MainContent] -->
+        <replace css:theme-children=".breadcrumb" css:content-children=".breadcrumb"/>
+
+        <prepend css:theme="#content-well" css:content-children="#content"/>
+
+        <!-- [/MainContent] -->
     </rules>
 </rules>
