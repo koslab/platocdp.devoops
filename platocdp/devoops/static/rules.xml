@@ -80,11 +80,12 @@
         <!-- [MainContent] -->
         <replace css:theme-children=".breadcrumb" css:content-children=".breadcrumb"/>
 
+        <replace css:theme-children="#page-title"
+                 css:content-children=".documentFirstHeading"/>
+
         <rules css:if-content=".portaltype-portlet-page.template-two-columns">
             <drop css:theme="#content-well" attributes="class"/>
             <replace css:theme-children="#content-well">
-
-            <h3 class="page-header"><xsl:copy-of select="//*[@id='parent-fieldname-title']/node()"/></h3>
             <xsl:if css:test="#portletPageTopRow">
             <div class="row" id="platocdp-portletpage-top">
                 <div class="col-xs-12">
@@ -126,7 +127,7 @@
         </rules>
 
         <rules css:if-not-content=".portaltype-portlet-page.template-two-columns">
-            <prepend css:theme="#content-well" css:content-children="#content"/>
+            <prepend css:theme="#content-well" css:content-children="#content-core"/>
         </rules>
 
         <!-- [/MainContent] -->
