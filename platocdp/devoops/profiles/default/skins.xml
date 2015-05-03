@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <object name="portal_skins" allow_any="False" cookie_persistence="False"
-   default_skin="Sunburst Theme">
+   default_skin="Bootstrap Theme">
    <object name="platocdp_devoops"
         meta_type="Filesystem Directory View"
         directory="platocdp.devoops:skins/platocdp_devoops"/>

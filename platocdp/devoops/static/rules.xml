@@ -83,7 +83,8 @@
         <rules css:if-content=".portaltype-portlet-page.template-two-columns">
             <drop css:theme="#content-well" attributes="class"/>
             <replace css:theme-children="#content-well">
-                
+
+            <h3 class="page-header"><xsl:copy-of select="//*[@id='parent-fieldname-title']/node()"/></h3>
             <xsl:if css:test="#portletPageTopRow">
             <div class="row" id="platocdp-portletpage-top">
                 <div class="col-xs-12">
@@ -95,14 +96,14 @@
             </xsl:if>
 
             <div class="row" id="platocdp-portletpage-columns">
-                <div class="col-xs-6">
+                <div class="col-sm-12 col-md-6">
                     <xsl:if css:test="#portletPageFirstColumn">
                         <xsl:for-each css:select="#portletPageFirstColumn .portletWrapper">
                             <xi:include href="portlet-rules.xml"/>
                         </xsl:for-each>
                     </xsl:if>
                 </div>
-                <div class="col-xs-6">
+                <div class="col-sm-12 col-md-6">
                     <xsl:if css:test="#portletPageSecondColumn">
                         <xsl:for-each css:select="#portletPageSecondColumn .portletWrapper">
                             <xi:include href="portlet-rules.xml"/>
