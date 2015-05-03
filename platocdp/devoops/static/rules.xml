@@ -114,7 +114,7 @@
             <xsl:if css:test="#portletPageBottomRow">
             <div class="row" id="platocdp-portletpage-bottom">
                 <div class="col-xs-12">
-                    <xsl:for-each css:select="#portletPageTopRow .portletWrapper">
+                    <xsl:for-each css:select="#portletPageBottomRow .portletWrapper">
                         <xi:include href="portlet-rules.xml"/>
                     </xsl:for-each>
                 </div>

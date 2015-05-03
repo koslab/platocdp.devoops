@@ -25,3 +25,7 @@
 #content-well.well {
     background:#fcfcfc;
 }
+
+.portlet {
+    margin: 1px 0px 1em;
+}
