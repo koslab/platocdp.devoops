@@ -21,3 +21,7 @@
 #content ul.nav {
     list-style:none;
 }
+
+#content-well.well {
+    background:#fcfcfc;
+}

@@ -80,7 +80,53 @@
         <!-- [MainContent] -->
         <replace css:theme-children=".breadcrumb" css:content-children=".breadcrumb"/>
 
-        <prepend css:theme="#content-well" css:content-children="#content"/>
+        <rules css:if-content=".portaltype-portlet-page.template-two-columns">
+            <drop css:theme="#content-well" attributes="class"/>
+            <replace css:theme-children="#content-well">
+                
+            <xsl:if css:test="#portletPageTopRow">
+            <div class="row" id="platocdp-portletpage-top">
+                <div class="col-xs-12">
+                    <xsl:for-each css:select="#portletPageTopRow .portletWrapper">
+                        <xi:include href="portlet-rules.xml"/>
+                    </xsl:for-each>
+                </div>
+            </div>
+            </xsl:if>
+
+            <div class="row" id="platocdp-portletpage-columns">
+                <div class="col-xs-6">
+                    <xsl:if css:test="#portletPageFirstColumn">
+                        <xsl:for-each css:select="#portletPageFirstColumn .portletWrapper">
+                            <xi:include href="portlet-rules.xml"/>
+                        </xsl:for-each>
+                    </xsl:if>
+                </div>
+                <div class="col-xs-6">
+                    <xsl:if css:test="#portletPageSecondColumn">
+                        <xsl:for-each css:select="#portletPageSecondColumn .portletWrapper">
+                            <xi:include href="portlet-rules.xml"/>
+                        </xsl:for-each>
+                    </xsl:if>
+                </div>
+            </div>
+
+            <xsl:if css:test="#portletPageBottomRow">
+            <div class="row" id="platocdp-portletpage-bottom">
+                <div class="col-xs-12">
+                    <xsl:for-each css:select="#portletPageTopRow .portletWrapper">
+                        <xi:include href="portlet-rules.xml"/>
+                    </xsl:for-each>
+                </div>
+            </div>
+            </xsl:if>
+
+            </replace>
+        </rules>
+
+        <rules css:if-not-content=".portaltype-portlet-page.template-two-columns">
+            <prepend css:theme="#content-well" css:content-children="#content"/>
+        </rules>
 
         <!-- [/MainContent] -->
     </rules>
