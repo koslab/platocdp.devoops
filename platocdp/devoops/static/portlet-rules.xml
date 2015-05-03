@@ -12,6 +12,7 @@
         </xsl:attribute>
         <div class="box-header">
             <div class="box-name">
+                <i class="fa fa-cog"></i>
                 <xsl:copy-of select="dl/dt/node()"/>
             </div>
             <div class="box-icons">
