@@ -29,3 +29,11 @@
 .portlet {
     margin: 1px 0px 1em;
 }
+
+.portletCalendar .box-name i {
+    display:none;
+}
+
+.portletCalendar .box-name {
+    text-align:center;
+}
