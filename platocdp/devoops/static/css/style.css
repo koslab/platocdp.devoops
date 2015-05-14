@@ -20,6 +20,7 @@ h1, .h1, h2, .h2, h3, .h3 {
   position:relative;
   background: #525252 url(../img/devoops_pattern_b10.png) 0 0 repeat;
 }
+/*
 #logo a {
   color: #fff;
   font-family: 'Righteous', cursive;
@@ -35,7 +36,7 @@ h1, .h1, h2, .h2, h3, .h3 {
 #logo a:hover {
   background-position: right 25px;
   text-decoration: none;
-}
+}*/
 .navbar {
   margin: 0;
   border: 0;

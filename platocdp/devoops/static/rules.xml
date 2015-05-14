@@ -18,8 +18,22 @@
         <merge theme="/html/body" content="/html/body" attributes="dir"/>
         <append css:theme="body" css:content="#plone-analytics"/>
 
-        <replace css:theme="#portal-logo"
+        <replace css:theme-children="#logo"
             css:content="#portal-logo"/>
+
+        <!-- [User Menu] -->
+
+        <replace css:theme-children="#platocdp-accountinfo .user-name" css:if-content="#personaltools-logout"
+            css:content-children="#user-name"/>
+        <replace css:theme-children="#platocdp-accountinfo .dropdown-menu"
+            css:content-children="#portal-personaltools-wrapper .dropdown-menu"/>
+        <drop css:theme="#platocdp-accountinfo" css:if-not-content="#personaltools-logout"/>
+
+
+        <copy css:theme="#platocdp-login a" css:if-content="#personaltools-login" css:content="#personaltools-login"
+            attributes="href"/>
+        <drop css:theme="#platocdp-login" css:if-not-content="#personaltools-login"/>
+
 
         <!-- [LeftNavigationMenu] -->
 

@@ -41,3 +41,8 @@
 .DV-views div span {
     height:31px;
 }
+
+.template-login_form #content #breadcrumb,
+.template-logged_out #content #breadcrumb {
+    text-align:left;
+}
