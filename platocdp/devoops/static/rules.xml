@@ -95,7 +95,7 @@
         <replace css:theme-children=".breadcrumb" css:content-children=".breadcrumb"/>
 
         <replace css:theme-children="#page-title"
-                 css:content-children=".documentFirstHeading"/>
+                 css:content-children=".documentFirstHeading" css:if-content="#content-core"/>
 
         <rules css:if-content=".portaltype-portlet-page.template-two-columns">
             <drop css:theme="#content-well" attributes="class"/>
@@ -157,11 +157,13 @@
         <rules css:if-not-content=".portaltype-portlet-page.template-two-columns">
             <rules css:if-not-content="#DV-container">
             <prepend css:theme="#content-well" css:content-children="#content-core"/>
-
+            <replace css:theme-children="#content-well" css:content-children="#content" css:if-not-content="#content-core"/>
             <prepend css:theme="#content-well" css:content="#content form[name='edit_form']"
                 css:if-content=".template-atct_edit"/>
             </rules>
         </rules>
+
+
 
         <!-- [/MainContent] -->
     </rules>
