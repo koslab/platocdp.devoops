@@ -158,8 +158,6 @@
             <rules css:if-not-content="#DV-container">
             <prepend css:theme="#content-well" css:content-children="#content-core"/>
             <replace css:theme-children="#content-well" css:content-children="#content" css:if-not-content="#content-core"/>
-            <prepend css:theme="#content-well" css:content="#content form[name='edit_form']"
-                css:if-content=".template-atct_edit"/>
             </rules>
         </rules>
 
