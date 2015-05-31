@@ -1,0 +1,17 @@
+<dtml-with base_properties>
+   #content a:link { color: &dtml-linkColor;; }
+   #content {
+      background-color: &dtml-backgroundColor; !important; 
+   }
+   #sidebar-left {
+      background-color: &dtml-backgroundColor2; !important;
+   }
+   .sidebar-show #sidebar-left.col-sm-2,
+   .sidebar-show #sidebar-left.col-xs-2 {
+      background-color: &dtml-backgroundColor2; !important;
+   }
+
+   #breadcrumb, #top-nav, #main-search {
+      background-color: &dtml-backgroundColor2; !important;
+   }
+</dtml-with>

@@ -46,3 +46,23 @@
 .template-logged_out #content #breadcrumb {
     text-align:left;
 }
+
+#top-nav > .nav > li {
+    display:inline-block;
+}
+
+#top-nav > .nav > li > a {
+    padding-top:6px;
+    padding-bottom:6px;
+    color: #fff;
+}
+
+#top-nav > .nav > li > a:hover {
+    background: inherit;
+    text-decoration: underline;
+}
+
+.dropdown-menu > li > a:hover {
+    background: #428bca;
+    color: #fff;
+}

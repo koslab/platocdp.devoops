@@ -2,7 +2,8 @@ plone_skin:string=Bootstrap Theme
 logoName:string=logo.png
 
 linkColor:string=inherit
-backgroundColor:string=transparent
+backgroundColor:string=#ebebeb
+backgroundColor2:string=#6aa6d6
 
 fontSmallSize:string=100%
 borderWidth:string=1px

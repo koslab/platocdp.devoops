@@ -7,7 +7,27 @@
     xmlns:xi="http://www.w3.org/2001/XInclude"
     css:if-content="#visual-portal-wrapper">
 
-    <rules css:if-content="#visual-portal-wrapper">
+    <rules css:if-content=".template-login_form">
+        <theme href="login.html"/>
+
+        <prepend theme="/html/head" content="/html/head/base | /html/head/link | /html/head/style | /html/head/script | /html/head/meta | /html/head/title" />
+        <replace theme="/html" content="/html" attributes="lang"/>
+        <merge theme="/html/body" content="/html/body" attributes="class"/>
+        <merge theme="/html/body" content="/html/body" attributes="dir"/>
+        <append css:theme="body" css:content="#plone-analytics"/>
+
+        <replace css:theme-children="#logo"
+            css:content="#portal-logo"/>
+
+        <replace css:theme="input[name='username']" css:content="input[name='__ac_name']"/>
+        <replace css:theme="input[name='password']" css:content="input[name='__ac_password']"/>
+        <replace css:theme="input[name='submit']" css:content="input[name='submit']"/>
+        <copy css:theme="#platocdp-login-form" css:content="#login_form" attributes="method action"/>
+        <append css:theme="#platocdp-login-form" css:content="#login-form input[type='hidden']"/>
+
+    </rules> 
+
+    <rules css:if-not-content=".template-login_form">
         <theme href="index.html"/>
         <!--HEAD SECTION-->
         <!-- Drop styles in the head - these are added back by including them from Plone -->
@@ -24,7 +44,7 @@
         <!-- [User Menu] -->
 
         <replace css:theme-children="#platocdp-accountinfo .user-name" css:if-content="#personaltools-logout"
-            css:content-children="#user-name"/>
+            content="//*[@id='user-name']/text()"/>
         <replace css:theme-children="#platocdp-accountinfo .dropdown-menu"
             css:content-children="#portal-personaltools-wrapper .dropdown-menu"/>
         <drop css:theme="#platocdp-accountinfo" css:if-not-content="#personaltools-logout"/>
@@ -56,6 +76,29 @@
         </replace>
 
         <!-- [/LeftNavigationMenu] -->
+
+        <!-- [TopNavigationMenu] -->
+
+        <replace css:theme-children="#top-nav > .nav">
+            <xsl:for-each css:select="#navigation > li">
+                <li>
+                    <a><xsl:attribute name="class">
+                            <xsl:value-of select="a/@class"/>
+                            <xsl:if test="contains(current()/@class, 'active')">
+                                active
+                            </xsl:if>
+                    </xsl:attribute><xsl:attribute name="href">
+                    <xsl:value-of select="a/@href"/>
+                    </xsl:attribute>
+                <span><xsl:copy-of select="a/text()"/></span>
+                </a>
+                </li>
+            </xsl:for-each>
+        </replace>
+
+        <!-- [/LeftNavigationMenu] -->
+
+
 
 
         <!-- [ActionButtons] -->
@@ -165,4 +208,5 @@
 
         <!-- [/MainContent] -->
     </rules>
+
 </rules>
