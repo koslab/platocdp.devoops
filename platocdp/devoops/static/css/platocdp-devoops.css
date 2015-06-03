@@ -47,17 +47,17 @@
     text-align:left;
 }
 
-#top-nav > .nav > li {
+#context-nav .nav > li {
     display:inline-block;
 }
 
-#top-nav > .nav > li > a {
+#context-nav .nav > li > a {
     padding-top:6px;
     padding-bottom:6px;
     color: #fff;
 }
 
-#top-nav > .nav > li > a:hover {
+#context-nav .nav > li > a:hover {
     background: inherit;
     text-decoration: underline;
 }
@@ -65,4 +65,16 @@
 .dropdown-menu > li > a:hover {
     background: #428bca;
     color: #fff;
+}
+
+#platocdp-info {
+    font-size:10px;
+    text-align:center;
+    color:#fff;
+    border-top:1px solid #c7c7c7;
+    padding:5px;
+}
+
+#platocdp-info a {
+    color:#ddd;
 }

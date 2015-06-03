@@ -79,7 +79,7 @@
 
         <!-- [TopNavigationMenu] -->
 
-        <replace css:theme-children="#top-nav > .nav">
+        <replace css:theme-children="#context-nav .nav">
             <xsl:for-each css:select="#navigation > li">
                 <li>
                     <a><xsl:attribute name="class">

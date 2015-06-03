@@ -11,7 +11,7 @@
       background-color: &dtml-backgroundColor2; !important;
    }
 
-   #breadcrumb, #top-nav, #main-search {
+   #breadcrumb, #context-nav, #main-search {
       background-color: &dtml-backgroundColor2; !important;
    }
 </dtml-with>

@@ -168,6 +168,10 @@
             <div id="sidebar-left" class="col-xs-6 col-sm-5 col-md-4 col-lg-3">
                <ul class="nav main-menu">
                </ul>
+               <div id="platocdp-info">
+                  <p>Powered by PlatoCDP v4.3alpha, a <a href="http://www.plone.org">Plone</a> based Content &amp; Data Management Platform.</p>
+                  <p>&copy; 2015, <a href="http://www.koslab.org">KOSLAB Technologies</a>. Licensed under GPLv2.</p>
+               </div>
             </div>
             <!--Start Content-->
             <div id="dark-overlay" class="col-xs-12 col-sm-12">
@@ -175,45 +179,38 @@
             <div id="content" class="col-xs-12 col-sm-12">
                <div id="ajax-content">
                   <div class="row">
-                     <div id="breadcrumb" class="hidden-xs col-sm-6 col-md-4">
+                     <div id="breadcrumb" class="hidden-xs col-sm-6 col-md-6">
                         <ul class="breadcrumb">
                            <li><a href="index.html">Dashboard</a></li>
-                           <li><a href="#">Charts</a></li>
-                           <li><a href="#">xCharts</a></li>
                         </ul>
                      </div>
-                     <div id="top-nav" class="hidden-xs hidden-sm col-md-6">
-                        <ul class="nav pull-right">
-                           <li>
-                           <a href="#">
-                              <i class="fa fa-power-off"></i>
-                              <span>Logout</span>
-                           </a>
-                           </li>            
-                        </ul>
+                     <div id="context-nav" class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="container-fluid">
+                           <div class="row">
+                              <div class="col-xs-12 col-sm-12 col-md-12">
+                                 <ul class="nav pull-right">
+                                    <li>
+                                    <a href="#">
+                                       <i class="fa fa-power-off"></i>
+                                       <span>Logout</span>
+                                    </a>
+                                    </li>            
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
                      </div>
-                     <div id="main-search" class="col-sm-6 col-md-2">
-                        <div id="search">
-                           <input type="text" placeholder="Search Dataset"/>
-                           <i class="fa fa-search"></i>
+                     <div class="col-xs-12 col-sm-12 col-md-12">
+                        <h3 id="page-title" class="page-header"></h3>
+                        <div class="row">
+                           <div class="col-xs-12">
+                              <div id="content-well" class="well">
+                                 <div class="visualClear"></div>
+                              </div>
+                           </div>
                         </div>
                      </div>
 
-                  </div>
-
-                  <h3 id="page-title" class="page-header"></h3>
-                  <div class="row">
-                     <div class="col-xs-12">
-                        <div id="content-well" class="well">
-                           <div class="visualClear"></div>
-                        </div>
-                     </div>
-                  </div>
-
-                  <div style="text-align:center">
-                     <p>Powered by PlatoCDP v4.3alpha, a <a href="http://www.plone.org">Plone</a> based Content &amp; Data Management Platform.</p>
-                     <p>&copy; 2015, <a href="http://www.koslab.org">KOSLAB Technologies</a>. Licensed under GPLv2.</p>
-                  </div>
                </div>
             </div>
             <!--End Content-->
