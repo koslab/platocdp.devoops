@@ -66,8 +66,9 @@ a.show-sidebar:hover {
 }
 #sidebar-left {
   position:fixed;
-  z-index: 999;
+  z-index: 3000;
   left:0px;
+  top: 0px;
   box-shadow: 0 0 20px #000;
   padding-bottom: 3000px !important;
   margin-bottom: -3000px !important;
@@ -78,11 +79,16 @@ a.show-sidebar:hover {
   transition: 0.2s;
 }
 
+.sidebar-show #sidebar-left {
+   left:-2000px;
+}
+
 #dark-overlay, #content {
   position: relative;
   z-index: 10;
   background: #ebebeb;
   box-shadow: 0 0 6px #131313;
+  padding-top:60px;
   padding-bottom: 3000px !important;
   margin-bottom: -2980px !important;
   overflow: hidden;
@@ -94,7 +100,8 @@ a.show-sidebar:hover {
 
 #dark-overlay {
     position:fixed;
-    z-index:21;
+    z-index:2999;
+    top:0px;
     background:#000;
     opacity:0.7;
      -webkit-transition: 0.2s;
@@ -454,29 +461,7 @@ a.show-sidebar:hover {
 .expanded a.close-link {
   display:none;
 }
-#sidebar-left.col-xs-6 {
-  opacity: 1;
-/*  width: 0%;
-  padding: 0;*/
-  padding: 0 15px;
-}
 
-#content.col-xs-12 {
-}
-.sidebar-show #sidebar-left.col-xs-6 {
-/*  opacity: 1;
-  width: 16.666666666666664%;
-  padding: 0 15px;*/
-    opacity:1;
-    left:-2000px;
-    padding: 0;
-}
-.sidebar-show #content.col-xs-12 {
-/*  opacity: 1;
-  width: 83.33333333333334%;*/
-  opacity:1;
-  width: 100%;
-}
 .expanded {
   overflow-y:scroll;
   border: 0;
@@ -646,13 +631,18 @@ ul.DTTT_dropdown.dropdown-menu > li:hover > a {
 
 #breadcrumb, #context-nav, #main-search {
   padding: 0;
-  line-height: 40px;
+  line-height: 35px;
+}
+
+#secondary-panel {
   background: #525252;
   background: #5a8db6 url(../img/devoops_pattern_b10.png) 0 0 repeat;
-  margin-bottom: 20px;
+  height:38px;
+  overflow:hidden;
 }
+
 .breadcrumb {
-  padding: 0 15px;
+  padding: 3px 15px 0 15px;
   background: none;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -2307,19 +2297,6 @@ td.beauty-hover {
   margin-left:20px;
 }
 @media (min-width: 768px) {
-  #sidebar-left.col-sm-6 {
-    opacity: 1;
-    padding: 0 15px;
-  }
-  .sidebar-show #sidebar-left.col-sm-6 {
-    opacity: 1;
-    left:-2000px;
-    padding:0;
-  }
-  .sidebar-show #content.col-sm-10 {
-    opacity: 1;
-    width:100%;
-  }
   .page-404 .form-inline {
     width: 60%;
   }

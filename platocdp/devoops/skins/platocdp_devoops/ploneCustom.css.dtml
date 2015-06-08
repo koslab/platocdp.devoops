@@ -11,7 +11,7 @@
       background-color: &dtml-backgroundColor2; !important;
    }
 
-   #breadcrumb, #context-nav, #main-search {
+   #secondary-panel {
       background-color: &dtml-backgroundColor2; !important;
    }
 </dtml-with>

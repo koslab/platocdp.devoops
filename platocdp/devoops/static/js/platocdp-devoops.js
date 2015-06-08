@@ -347,6 +347,11 @@ $(document).ready(function () {
 		$('div#main').toggleClass('sidebar-show');
 		setTimeout(MessagesMenuWidth, 250);
 	});
+    $('#dark-overlay').on('click', function (e) {
+        e.preventDefault();
+        $('div#main').toggleClass('sidebar-show');
+        setTimeout(MessagesMenuWidth, 250);
+    });
 	$('.main-menu').on('click', 'a', function (e) {
 		var parents = $(this).parents('li');
 		var li = $(this).closest('li.dropdown');

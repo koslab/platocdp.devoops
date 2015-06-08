@@ -141,8 +141,8 @@
                  css:content-children=".documentFirstHeading" css:if-content="#content-core"/>
 
         <rules css:if-content=".portaltype-portlet-page.template-two-columns">
-            <drop css:theme="#content-well" attributes="class"/>
-            <replace css:theme-children="#content-well">
+            <drop css:theme="#content-core" attributes="class"/>
+            <replace css:theme-children="#content-core">
             <xsl:if css:test="#portletPageTopRow">
             <div class="row" id="platocdp-portletpage-top">
                 <div class="col-xs-12">
@@ -183,13 +183,13 @@
             </replace>
         </rules>
 
-        <replace css:theme-children="#content-well" css:if-content="#DV-container"> 
+        <replace css:theme-children="#content-core" css:if-content="#DV-container"> 
             <xsl:copy-of select="//*[@id='content-core']/div/p"/>
             <xsl:copy-of select="//*[@id='DV-container']"/>
             <div id="overlay"></div>
         </replace>
-        <append css:theme="#content-well" css:if-content="#DV-container" content="//*[@id='content-core']/div/script"/>
-        <drop css:theme="#content-well" attributes="class" css:if-content="#DV-container"/>
+        <append css:theme="#content-core" css:if-content="#DV-container" content="//*[@id='content-core']/div/script"/>
+        <drop css:theme="#content-core" attributes="class" css:if-content="#DV-container"/>
 
         <!--
         <drop css:content="#manage-annotations"/>
@@ -199,8 +199,8 @@
         -->
         <rules css:if-not-content=".portaltype-portlet-page.template-two-columns">
             <rules css:if-not-content="#DV-container">
-            <prepend css:theme="#content-well" css:content-children="#content-core"/>
-            <replace css:theme-children="#content-well" css:content-children="#content" css:if-not-content="#content-core"/>
+            <prepend css:theme="#content-core" css:content-children="#content-core"/>
+            <replace css:theme-children="#content-slot" css:content-children="#content" css:if-not-content="#content-core"/>
             </rules>
         </rules>
 
