@@ -57,7 +57,7 @@
 
         <!-- [LeftNavigationMenu] -->
 
-        <replace css:theme-children=".main-menu">
+        <replace css:theme-children="#main-menu">
             <xsl:for-each css:select="#navigation > li">
                 <li>
                     <a><xsl:attribute name="class">

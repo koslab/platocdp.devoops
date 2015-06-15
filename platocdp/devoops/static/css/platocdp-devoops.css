@@ -55,7 +55,6 @@
     white-space:nowrap;
     position:relative;
     left:0px;
-    transition:0.5s;
 }
 
 #context-nav .nav > li {
@@ -93,11 +92,24 @@
 #platocdp-info {
     font-size:10px;
     text-align:center;
-    color:#fff;
     border-top:1px solid #c7c7c7;
     padding:5px;
 }
 
-#platocdp-info a {
-    color:#ddd;
+
+#sidebar-heading {
+    border-bottom:1px solid #c7c7c7;
+}
+
+#portal-logo {
+    display:block;
+}
+
+#sidebar-heading #logo {
+    margin:20px auto 20px auto;
+    text-align:center;
+}
+
+.panel-menu .nav > li > a:hover, .panel-menu .nav > li > a:focus {
+    background: #3F51B5;
 }

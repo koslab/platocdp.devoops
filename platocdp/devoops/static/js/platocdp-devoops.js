@@ -344,12 +344,12 @@ function FullScreenMap(){
 $(document).ready(function () {
 	$('.show-sidebar').on('click', function (e) {
 		e.preventDefault();
-		$('div#main').toggleClass('sidebar-show');
+		$('body').toggleClass('sidebar-show');
 		setTimeout(MessagesMenuWidth, 250);
 	});
     $('#dark-overlay').on('click', function (e) {
         e.preventDefault();
-        $('div#main').toggleClass('sidebar-show');
+        $('body').toggleClass('sidebar-show');
         setTimeout(MessagesMenuWidth, 250);
     });
 	$('.main-menu').on('click', 'a', function (e) {

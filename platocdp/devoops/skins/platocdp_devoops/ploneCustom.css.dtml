@@ -1,5 +1,5 @@
 <dtml-with base_properties>
-   #content a:link { color: &dtml-linkColor;; }
+/*   #content a:link { color: &dtml-linkColor;; }
    #content {
       background-color: &dtml-backgroundColor; !important; 
    }
@@ -13,5 +13,5 @@
 
    #secondary-panel {
       background-color: &dtml-backgroundColor2; !important;
-   }
+   }*/
 </dtml-with>
