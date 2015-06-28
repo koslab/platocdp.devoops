@@ -656,10 +656,10 @@ ul.DTTT_dropdown.dropdown-menu > li:hover > a {
   margin: 0;
 }
 .breadcrumb > li > a {
-  color:#d8d8d8;
+  color:#525252;
 }
 .breadcrumb > li > a:hover, .breadcrumb > li:last-child > a {
-  color:#f8f8f8;
+  color:#525252;
 }
 .bs-callout {
   padding: 15px;

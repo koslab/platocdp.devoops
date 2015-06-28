@@ -1,5 +1,7 @@
 #content ul.breadcrumb {
     list-style: outside none none;
+    margin:0px;
+    padding:10px 2px;
 }
 
 #content ul.breadcrumb > li {
@@ -7,7 +9,7 @@
 }
 
 #content ul.breadcrumb > .active {
-    color:#fff;
+/*    color:#fff;*/
 }
 
 #actions-nav li {
@@ -112,4 +114,8 @@
 
 .panel-menu .nav > li > a:hover, .panel-menu .nav > li > a:focus {
     background: #3F51B5;
+}
+
+.platocdp-contextnav-hidden #main {
+    margin-top: 0px;
 }

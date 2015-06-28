@@ -14,6 +14,7 @@
         <replace theme="/html" content="/html" attributes="lang"/>
         <merge theme="/html/body" content="/html/body" attributes="class"/>
         <merge theme="/html/body" content="/html/body" attributes="dir"/>
+
         <append css:theme="body" css:content="#plone-analytics"/>
 
         <replace css:theme-children="#logo"
@@ -78,7 +79,8 @@
         <!-- [/LeftNavigationMenu] -->
 
         <!-- [TopNavigationMenu] -->
-
+        <drop css:theme="#secondary-panel" css:if-not-content="#platocdp-contextnav"/>
+        <append css:theme="head" css:content="#platocdp-contextnav-hidden"/>
         <replace css:theme-children="#context-nav .nav">
             <!--            <xsl:for-each css:select="#navigation > li">
                 <li>
@@ -136,6 +138,7 @@
 
         <!-- [MainContent] -->
         <replace css:theme-children=".breadcrumb" css:content-children=".breadcrumb"/>
+        <replace css:theme-children=".documentDescription" css:content-children=".documentDescription"/>
 
         <replace css:theme-children="#page-title"
                  css:content-children=".documentFirstHeading" css:if-content="#content-core"/>
