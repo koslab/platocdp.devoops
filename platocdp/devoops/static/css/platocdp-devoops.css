@@ -22,6 +22,7 @@
 
 #content ul.nav {
     list-style:none;
+    margin-left: 0;
 }
 
 #content-well.well {
@@ -119,4 +120,12 @@
 
 .platocdp-contextnav-hidden #main {
     margin-top: 0px;
+}
+
+#content .field input[type="text"][name$=".title"], #archetypes-fieldname-title input {
+    height:2em;
+}
+
+#content li, dl.portlet li, .portletStaticText li {
+    margin-bottom:0;
 }
