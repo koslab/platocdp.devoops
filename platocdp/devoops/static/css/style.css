@@ -82,8 +82,6 @@ a.show-sidebar:hover {
   position: relative;
   z-index: 10;
   background: #E9EAED;
-  box-shadow: 0 0 6px #131313;
-  padding-top:60px;
   padding-bottom: 3000px !important;
   margin-bottom: -2980px !important;
   overflow: hidden;

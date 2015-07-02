@@ -120,3 +120,8 @@
 #content li, dl.portlet li, .portletStaticText li {
     margin-bottom:0;
 }
+
+#breadcrumb-wrapper {
+    margin-top:60px;
+    margin-bottom:5px;
+}
