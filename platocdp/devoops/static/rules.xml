@@ -145,7 +145,7 @@
 
         <rules css:if-content=".portaltype-portlet-page.template-two-columns">
             <drop css:theme="#content-core" attributes="class"/>
-            <replace css:theme-children="#content-core">
+            <replace css:theme-children="#content">
             <xsl:if css:test="#portletPageTopRow">
             <div class="row" id="platocdp-portletpage-top">
                 <div class="col-xs-12">
@@ -203,7 +203,11 @@
         <rules css:if-not-content=".portaltype-portlet-page.template-two-columns">
             <rules css:if-not-content="#DV-container">
             <prepend css:theme="#content-core" css:content-children="#content-core"/>
-            <replace css:theme-children="#content-slot" css:content-children="#content" css:if-not-content="#content-core"/>
+            <replace css:theme-children="#content-slot" css:content-children="#content" css:if-content=".portaltype-plone-site"/>
+            <rules css:if-not-content=".portaltype-plone-site">
+                <replace css:theme-children="#content" css:content-children="#content" css:if-not-content="#content-core"/>
+            </rules>
+
             </rules>
         </rules>
 
